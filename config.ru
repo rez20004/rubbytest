@@ -26,13 +26,9 @@ map '/headers' do
 end
 
 map '/' do
-  welcome = proc do |env|
+  app = proc do |env|
     
-<section class='container'>
-
 app = lambda {|env| [200, {'Content-Type': 'text/html'}, 'Hello World']}
-
-</section>
 
   end
   run app
